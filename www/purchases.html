@@ -18,50 +18,54 @@
             <fieldset>
                 <legend>Information client</legend>
 
-                <label for="name">Nom :</label>
-                <input type="text" id="name">
+                <label for="name">Nom *</label>
+                <input type="text" id="name" required>
 
-                <label for="firstName">Prénom :</label>
-                <input type="text" id="firstName">
+                <label for="firstName">Prénom  *</label>
+                <input type="text" id="firstName" required>
 
-                <label for="mail">Adresse e-mail :</label>
-                <input type="email" id="mail">
+                <label for="mail">Adresse e-mail  *</label>
+                <input type="email" id="mail" required>
 
-                <label for="assistance">Service :</label>
-                <select id="assistance ">
-                    <option>Comptabilité</option>
-                    <option>Ressources humaines</option>
-                    <option>Service informatique</option>
-                </select>
+                <div id="assistance">
+                    <p id="assistanceP">Service *</p>
+                <!-- <label for="assistance">Service : *</label>  -->
+                    <select id="assistanceS">
+                        <option>Comptabilité</option>
+                        <option>Ressources humaines</option>
+                        <option>Service informatique</option>
+                    </select>
+                </div>
+                
             </fieldset>
 
             <fieldset>
                 <legend>Article demandé</legend>
 
-                <label for="articleName">Nom de l'article :</label>
-                <input type="text">
+                <label for="articleName">Nom de l'article : *</label>
+                <input type="text" required>
 
-                <label for="articleDescription">Description de l'article :</label>
-                <textarea id="articleDescription" ></textarea>
+                <label for="articleDescription">Description de l'article : *</label>
+                <textarea id="articleDescription" required cols="69" rows="3"></textarea>
 
-                <label for="quantity">Quantité :</label>
-                <input type="number" id="quantity" min="1" max="1000">
+                <label for="quantity">Quantité : *</label>
+                <input type="number" id="quantity" min="1" max="1000" required>
 
-                <label for="unitPrice">Prix unitaire :</label>
-                <input type="number" id="unitPrice">
+                <label for="unitPrice">Prix unitaire : *</label>
+                <input type="number" id="unitPrice" required min="">
 
-                <label for="deliveryDate">Date de livraison</label>
-                <input type="date" id="deliveryDate">
+                <label for="deliveryDate">Date de livraison : *</label>
+                <input type="date" id="deliveryDate" required>
             </fieldset>
 
             <fieldset>
                 <legend>Information complémentaire</legend>
-                <label for="explainPurchase">Expliquer la nécessité de l'achat</label>
-                <textarea id="explainPurchase"></textarea>
+                <label for="explainPurchase">Expliquer la nécessité de l'achat : *</label>
+                <textarea id="explainPurchase" required cols="69" rows="3" ></textarea>
             </fieldset>
-
-            <button type="submit">Envoyer  la demande</button>
-            <button>Annuler</button>
+            
+            <button type="submit" id="buttonSubmit">Envoyer  la demande</button>
+            <button type="reset" id="buttonReset">Annuler</button>
         </form>
 
     </main>
