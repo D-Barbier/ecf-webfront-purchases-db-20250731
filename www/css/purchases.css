@@ -18,6 +18,10 @@ PURCHASES CSS
     --crm-success: #488287;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -25,8 +29,8 @@ body {
     background-color: var(--light);   /* Vous pouvez changer la couleur de fond */
     color: var(--dark);   /* Vous pouvez changer la couleur du texte */
     font-size: 1.6rem;
-
 }
+
 
 html{
     font-size: 62.5%;
@@ -36,25 +40,98 @@ header{
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: flex-end;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+
+header h1{
+    color: var(--crm-primary);
 }
 
 main{
     width: 120rem;
     max-width: 100%;
-    margin: auto;
+    margin: 5rem auto;
 }
 
 footer {
     width: 120rem;
     max-width: 100%;
+    margin: auto;
 }
 
 footer h2{
     text-align: center;
+    color: var(--crm-primary);
 }
 
 footer p {
-
     text-align: justify;
 }
+
+legend{
+    color: var(--crm-secondary);
+}
+
+fieldset{
+    border-color: var(--crm-secondary);
+    margin: 0rem;
+}
+
+input{
+    width: 45%;
+    border: 0.1rem solid var(--crm-primary);
+    color: var(--crm-primary);
+}
+
+label{
+    width: 45%;
+    display: inline-block;
+    color: var(--crm-primary);
+}
+
+label , input {
+    margin-bottom: 0.5rem;
+}
+
+textarea{
+    border: 0.1rem solid var(--crm-primary);
+    color: var(--crm-primary);
+}
+
+#assistance {
+    display: flex;
+    color: var(--crm-primary);
+}
+
+#assistanceP{
+    width: 45%;
+    margin: 0rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#assistanceS{
+    width: 45%;
+    font-size: 1.6rem; 
+    border: 0.1rem solid var(--crm-primary);
+    color: var(--crm-primary);
+}
+
+#deliveryDate{
+    font-size: 1.6rem; 
+    color: var(--crm-primary);
+}
+
+#buttonSubmit , #buttonReset{
+    margin-top: 1rem;
+    margin-right: 0.5rem;
+    font-size: 1.6rem;
+    background-color: var(--crm-secondary);
+    color: var(--light);
+    border-radius: 0.5rem;
+    border-color: var(--crm-secondary);
+    padding: 1rem;
+}
+
